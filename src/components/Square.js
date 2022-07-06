@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 class Square extends Component {
-  handleClick = () =>{
-    this.props.handleGamePlay(this.props.index)
+  handleClick = (index) =>{
+    // alert (this.props.index)
+    this.props.xPlayer(this.props.index)
   }
   render() {
     return(

@@ -8,22 +8,21 @@ class App extends Component {
     this.state = {
       squares: [null, null, null, null, null, null, null, null, null],
       value: null,
+      index: ,
     }
   }
 
-  handleGamePlay = (index) => {
-    // alert(index)
-    const {squares} = this.state
-    if(index === [0,1,2,3,4,5,6,7,8]){
-      squares[index] = "👑"
-  //     this.setState({board: board})
-  //   } 
-  //   else {
-  //     board[index] = "🌴"
-      this.setState({squares: squares})
-    }
+  xPlayer = (index) => {
+
     
-  }
+  //   const {squares} = this.state.squares
+  //   if(index === index){
+  //     squares[index] = "𝕏"
+  //     this.setState({squares: squares})
+  // } else {
+  //   return "🧿"
+  // }
+}
 
   // function calculateWinner(squares) {
   //   const lines = [
@@ -49,14 +48,14 @@ class App extends Component {
     return(
       <>
         <h1>Tic Tac Toe</h1>
-        <div className='gameboard' onClick={()=> this.setState({value: "X"})}>
+        <div className='gameboard'>
         {this.state.squares.map((value,index) => {
           return (
             <Square 
               key = {index}
               value = {value}
               index = {index}
-              // handleGamePlay = {this.handleGamePlay}
+              xPlayer = {this.xPlayer}
             />)
         })}
         </div>
